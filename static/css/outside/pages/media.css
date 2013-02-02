@@ -1,0 +1,121 @@
+
+
+/* CONTAINER */
+
+#media_page #container{
+	width: 942px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+#media_page #container #header .logo{
+	float: left;
+	width: 256px;
+	height: 66px;
+	margin-left: 0px;
+	margin-top: 21px;
+}
+
+/* CONTENT */
+
+#media_page #content{
+	clear: both;
+	padding-top: 5px;
+}
+
+#content .wide .attention.media{ 
+	width: 500px;
+	float:left;
+}
+
+#content .wide .laptop{
+	background: transparent url(../../../img/outside/media/laptop.gif) no-repeat;
+	width: 260px;
+	height: 141px;
+	float: right; 
+	margin: 35px 20px 0 0;
+}
+
+#content .wide .laptop img{
+	padding-left: 36px;
+	padding-top: 7px;
+}
+
+#media_page #content .wide .txt{
+	margin-left: 15px;
+}
+
+
+#media_page #content .wide .galleryList div{
+	background: url(../../../img/outside/media/image_holder.jpg) no-repeat;
+	width: 218px;
+	height: 158px;
+	float: left;
+	margin-right: 2px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+}
+
+#media_page #content .wide .galleryList img{
+	padding-left: 11px;
+	padding-top: 12px;
+}
+
+#media_page #content .wide .galleryPrev{
+	background: url(../../../img/outside/media/previous_normal.jpg) no-repeat;
+	width: 87px;
+	height: 25px;
+	cursor: pointer;
+	float: left;
+}
+
+#media_page #content .wide .galleryPrev:hover{
+	background: url(../../../img/outside/media/previous_hover.jpg) no-repeat;
+	width: 87px;
+	height: 25px;
+	cursor: pointer;
+}
+
+#media_page #content .wide .galleryNext{
+	background: url(../../../img/outside/media/next_normal.jpg) no-repeat;
+	width: 87px;
+	height: 25px;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px;
+}
+
+#media_page #content .wide .galleryNext:hover{
+	background: url(../../../img/outside/media/next_hover.jpg) no-repeat;
+	width: 87px;
+	height: 25px;
+	cursor: pointer;
+}
+
+#galleryNav {float: right; margin-top:5px; margin-right:16px; z-index: 99;}
+
+	.nav1{background: url(../../../img/outside/image-gallery-top-nav-1.jpg) no-repeat;
+	width: 90px;
+	height: 31px;
+	cursor: pointer;
+	text-indent:-9999px;
+	float: left;}
+	
+	.nav2{background: url(../../../img/outside/image-gallery-top-nav-2.jpg) no-repeat;
+	width: 90px;
+	height: 31px;
+	cursor: pointer;
+	text-indent:-9999px;
+	float: left;}
+	
+	.nav3{background: url(../../../img/outside/image-gallery-top-nav-3.jpg) no-repeat;
+	width: 90px;
+	height: 31px;
+	cursor: pointer;
+	text-indent:-9999px;
+	float: left;}
+	
+#GallerySlide {margin: 0 0 0 2px; padding: 0;}
+
+#media_page #content .wide .attention {margin-bottom:15px;}

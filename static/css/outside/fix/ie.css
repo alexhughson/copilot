@@ -1,0 +1,25 @@
+#index #container,
+#sub_page #container{width: 942px;}
+
+#index #content .clientList{margin-left: 84px;}
+
+#content .right{margin-left: 14px;}
+
+#footer .copyright{margin-left: 102px;}
+
+.blognav{background: url(../../../img/outside/navigation/.gif) no-repeat 0 3px; padding: 10px 10px 15px 10px; overflow:visible; }
+
+#index .leadertext h1{font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight:bold; line-height:36px; margin: 0 0 0 12px;}
+#index .leadertext h2{font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height:28px; margin: 10px 0 0 12px;}
+#content h2{font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight:bold; line-height:28px; margin: 0 0 12px 15px;}
+#content .normal h1, #content .wide h1{font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight:bold; line-height:36px; margin: 0 0 0 12px;}
+.subHeading{font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height:28px; margin: 10px 0 0 0px;}
+
+#media_page #content .wide .galleryList div{
+	margin: 0px !important;
+	width:218px !important;
+}
+
+#content .wide .galleryList div{
+margin-left: 10px;
+}

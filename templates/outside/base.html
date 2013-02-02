@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+{% comment %}
+The base template just provides the basics.  It automatically includes all relevant 
+stylesheets and javascript.  Editable blocks:
+-stylesheets
+-javascript
+-iecompatibility
+-body
+  -header
+    -navigation_links
+  -content
+  -footer
+-title 
+{% endcomment %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>{% block title %}Contractor Copilot{% endblock title%}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Main stylesheet -->
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="static/css/outside/core.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/contact_us.css" />
+<link rel="shortcut icon" href="img/favicon.gif" />
+{% endblock stylesheets %}
+
+{% block iecompatibility %}
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/fix/ie6.css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/fix/ie.css" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/fix/ie.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="css/fix/ie.css" />
+<![endif]-->
+{% endblock iecompatibility %}
+
+</head>
+
+<!-- Define Page -->
+<body id="index">
+    {% block body %}
+	<div id="container">
+        {% block header %}
+	        <!-- Header -->
+	        <div id="header">
+		        <!-- Logo -->
+		        <div class="logo">
+			        <a href="index.html"><img src="static/img/logo.png" alt="Copilot" height="100" /></a>
+		        </div>
+		        <!-- End Logo -->
+		        <!-- Navigation -->
+		        <ul class="nav">
+		            {% block navigation_links %}
+			        <li><a href="/" class="{% block nav_link_index_class %}{% endblock %}">home</a></li>
+			        <li><a href="what_we_do" class="{% block nav_link_what_we_do_class %}{% endblock %}">what we do</a></li>
+			        <li><a href="user/home">login</a></li>
+			        <li><a href="contact_us" class="{% block nav_link_contact_class %}{% endblock %}">contact us</a></li>
+			        <li><a href="http://blog.contractorcopilot.com" class="blognav">blog</a></li>
+			        {% endblock navigation_links %}
+		        </ul>
+		        <!-- End Navigation -->
+	        </div>
+	        <!-- End Header -->
+
+        {% endblock header %}
+	
+        {% block content %}
+        
+        {% endblock content %}
+        
+        {% block footer %}
+	        <!-- Start Footer -->
+	        <div id="footer">
+		        <!-- Start Footer Wrap -->
+		        <div class="footerWrap">
+			        <!-- Footer Lists -->
+			        <div class="footerList">
+				        <ul>
+                        <li class="bold"><a href="user/home">Login</a></li>
+                        <li><a href="privacy_policy">Privacy Policy</a></li>
+                            <li><a href="terms_of_service">Terms of Service</a></li>
+                        <li><a href="contact_us">Contact Us</a></li>
+                        <li class="copyright">Copyright Snappy Gorilla, 2012. All Rights Reserved.</li>
+				        </ul>
+			        </div>
+			        <!-- End Footer Lists -->
+		        </div>
+		        <!-- End Footer Wrap -->
+	        </div>
+	        <!-- End Footer -->
+        {% endblock footer %}
+    </div>    
+    {% endblock body %}
+    {% block javascript %}
+    <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/flow_metrics.js"></script>
+    <script type="text/javascript" src="/static/js/google_analytics.js"></script>
+    <script type="text/javascript" src="/static/js/outside/jquery.pngFix.pack.js"></script>
+    <script type="text/javascript" src="/static/js/outside/jquery.flow.1.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/outside/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="/static/js/outside/concept.js"></script>
+    <script type="text/javascript" src="/static/js/icanhaz.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery_extensions.js"></script>
+    <script type="text/javascript" src="/static/js/util.js"></script>
+    <script type="text/javascript" src="/static/js/contact_form.js"></script>
+    <script type="text/javascript" src="/static/js/user_login.js"></script>
+    <script type="text/javascript" src="/static/js/outside/load.js"></script>
+    {% endblock javascript %}
+</body>
+</html>

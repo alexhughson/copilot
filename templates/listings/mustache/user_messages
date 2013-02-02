@@ -1,0 +1,7 @@
+<hr />
+<div class="user_messages">
+    <h4>Your message history</h4>
+    <div class="messages">
+        <img src="/static/img/ajax-loader.gif" alt="Loading" />
+    </div>
+</div>

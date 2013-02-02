@@ -1,0 +1,23 @@
+<div class="user_login loading">
+    <div class="throb">
+        <span>We are checking your contact info <img src="/static/img/ajax-loader.gif" alt="loading" /></span>
+    </div>
+
+    <div class="input_form field">
+        <p>
+            To get in contact with you, I need your email.
+        </p>
+        <label>Your Email</label>
+        <input type="text" class="textbox-half" />
+        <input type="button" class="button" value="Submit" id="new_email_button" />
+        <p>
+            This email is never used for anything other than contact with you regarding these services and will not
+            be shared with any third parties.
+        </p>
+        <br />
+    </div>
+    <div class="user_data field">
+        <label>Your email</label>
+        I've got you as <email class="user_email" style="display: inline"></email>
+    </div>
+</div>

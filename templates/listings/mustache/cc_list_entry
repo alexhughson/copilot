@@ -1,0 +1,20 @@
+<div class="cc_entry">
+  {{#pending_change }} Updating Card Data - <img src="/static/img/ajax-loader.gif" alt="checking_card" /> {{/ pending_change }}
+  {{^pending_change }}
+{{^pending_fetch}}
+{{#validated}}
+<span class="card_number">Number: {{fetched_data.trnCardNumber}}</span>
+<span class="card_type">Card Type: {{ fetch_data.cardType }}</span>
+{{/validated}}
+{{/pending_fetch}}
+<span class="name">{{last_save.ordName}}</span>
+  {{^validated}}
+  <span>Card needs changes</span>
+    <a href="#" class="edit">Fix</a>
+    {{/validated}}
+  {{/pending_change }}
+
+  {{#validated}}<a href="#">Pay with this card</a>{{/validated}}
+
+
+</div>

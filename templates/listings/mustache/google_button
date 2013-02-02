@@ -1,0 +1,5 @@
+<div class="google_button">
+    <span class="thinking"><img src="/static/img/ajax-loader.gif" /></span>
+    <a class="login_link">Login</a>
+    Logging in with google is fun for the whole family
+</div>

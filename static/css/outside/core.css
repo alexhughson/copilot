@@ -1,0 +1,27 @@
+/* Stylesheet to RESET */
+@import url(reset.css);
+
+/* Stylesheet for GLOBAL OBJECTS */
+@import url(global.css);
+
+/* Stylesheet for NAVIGATION */
+@import url(navigation.css);
+
+/* Stylesheet for INDEX.HTML */
+@import url(pages/index.css);
+
+/* Stylesheet for SUB_PAGE.HTML */
+@import url(pages/sub_page.css);
+
+/* Stylesheet for MEDIA.HTML */
+@import url(pages/media.css);
+
+/* Stylesheet for SIFR3 */
+@import url(sifr.css);
+
+/* Stylesheet for GALLERY - PRETTYPHOTO */
+@import url(prettyPhoto.css);
+
+/* Stylesheet for GALLERY - Slider */
+@import url(pages/blog.css);
+

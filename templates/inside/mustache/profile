@@ -1,0 +1,110 @@
+<div class="column grid-5">
+    
+    <div class="block small">
+        <div class="top">
+            <h2>Select your business</h2>
+        </div>
+        <div class="content">
+            <ul class="menu" id="business_switcher">
+            {{#businesses}}
+                <li><a href="#" class="{{#selected}}selected{{/selected}}" {{^selected}}{{/selected}}business_key="{{key}}">{{short_name}}</a></li>
+            {{/businesses}}
+            </ul>
+        </div>
+    </div>
+    <div class="block small no-top">
+        <div class="content">
+            <h4><a href="#" id="create_business">Add another business</a></h4>
+        </div>
+    </div>
+    
+</div>
+<div class="column grid-11">
+    {{#businesses}}
+    {{#selected}}
+    <div class="block">
+        <img src="/static/img/inside/paper_plane.png" id="paper_plane"/>
+        <div class="top">
+            <h2>{{short_name}}</h2>
+        </div>
+        <div class="content">
+            <h4>Administrate your business</h4>
+            <ul class="shortcuts">
+                <li>
+                    <a href="" id="change_default_business" business_key="{{key}}">
+                        <span class="image"><img src="../static/img/inside/icons/Heart.png" alt="Default" /></span>
+                        <span class="title">Make this your default business</span>
+                    </a>
+                </li>
+                <li id="profile_button_edit_business">
+                    <a href="#edit_business">
+                        <span class="image"><img src="../static/img/inside/icons/Config.png" alt="Edit" /></span>
+                        <span class="title">Edit your business</span>
+                        <small>&nbsp;</small>
+                    </a>
+                </li>
+                <li id="profile_button_edit_schedule">
+                    <a href="#edit_schedule">
+                        <span class="image"><img src="../static/img/inside/icons/Clock.png" alt="Edit" /></span>
+                        <span class="title">Manage your schedule</span>
+                        <small>&nbsp;</small>
+                    </a>
+                </li>
+                <li id="profile_button_manage_customers">
+                   <a href="#manage_customers">
+                      <span class="image"><img src="/static/img/inside/icons/Speech-Bubble.png" alt="Interact" /></span>
+                      <span class="title">Interact with your Customers</span>
+                      <small>&nbsp;</small>
+                   </a>
+                </li>
+            </ul>
+            <h4>Handle your custom site</h4>
+            <ul class="shortcuts">
+                <li>
+                    <a {{#page.enabled}}href="{{page.get_url_link}}" target="_new" {{/page.enabled}}{{^page.enabled}}href="#change_minisite"{{/page.enabled}}">
+                        <span class="image"><img src="../static/img/inside/icons/World.png" alt="Visit" /></span>
+                        <span class="title">{{#page.enabled}}Visit your custom site{{/page.enabled}}{{^page.enabled}}Site offline{{/page.enabled}}</span>
+                        <small>{{#page.enabled}}Your custom site is currently enabled{{/page.enabled}}{{^page.enabled}}Your site is currently disabled{{/page.enabled}}</small>
+                    </a>
+                </li>
+                <li id="profile_button_manage_minisite">
+                    <a href="#custom_url">
+                        <span class="image"><img src="../static/img/inside/icons/Plus.png" alt="Upgrade" /></span>
+                        <span class="title">{{#page.is_paid}}You're on an upgraded account{{/page.is_paid}}{{^page.is_paid}}Upgrade your custom site{{/page.is_paid}}</span>
+                        <small>{{#page.is_paid}}You're currently on your own custom domain{{/page.is_paid}}{{^page.is_paid}}Your custom site is currently hosted with us{{/page.is_paid}}</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#minisite_reporting">
+                        <span class="image"><img src="../static/img/inside/icons/Piechart.png" alt="Reporting" /></span>
+                        <span class="title">Site reporting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#change_minisite">
+                        <span class="image"><img src="../static/img/inside/icons/Config.png" alt="Edit" /></span>
+                        <span class="title">Edit your custom site</span>
+                    </a>
+                </li>
+            </ul>
+            <h4 id="profile_advertise_section">Get more customers</h4>
+            <ul class="shortcuts">
+                <li>
+                    <a href="#publication">
+                        <span class="image"><img src="../static/img/inside/icons/Person.png" alt="Visit" /></span>
+                        <span class="title">Publish your business</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#advertising">
+                        <span class="image"><img src="../static/img/inside/icons/Person-group.png" alt="Visit" /></span>
+                        <span class="title">Advertise your business</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    {{/selected}}
+    {{/businesses}}
+</div>

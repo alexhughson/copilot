@@ -1,0 +1,3 @@
+<div class="booking_request">
+    <span>Proposed booking at {{ time }}</span>
+</div>

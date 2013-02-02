@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ business.full_name }}
+{% endblock title %}
+{% block logo_text %}
+    {{ business.full_name }}
+{% endblock logo_text %}
+{% block footer %}
+<div class="contentwidth">
+    <p><strong>&copy; 2012 <a href="http://www.contractorcopilot.com">Contractor Copilot</a> - Created for {{business.full_name}} </strong></p>
+    <ul class="footer-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Who I Am</a></li>
+        <li><a href="#business">What I Do</a></li>
+        <li><a href="#schedule">Book Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#pay">Pay</a></li>
+    </ul><br />
+    <a href="http://contractorcopilot.com">
+        <img src="/static/img/listings/copilot_logo.png" alt="Contractor Copilot Logo" />
+    </a>
+</div>
+{% endblock footer %}

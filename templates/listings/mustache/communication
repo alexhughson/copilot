@@ -1,0 +1,8 @@
+<!-- Data comes from Solicitation object in data.py -->
+<div class="message {{#from_contractor}}from_contractor{{/from_contractor}}">
+    <strong>{{#from_contractor}}Message from me{{/from_contractor}}{{^from_contractor}}Message from you{{/from_contractor}}&nbsp;on <time>{{when}}</time></strong>
+    <br />
+    {{ message }}
+    <br />
+</div>
+<br />

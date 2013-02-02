@@ -1,0 +1,64 @@
+<div class="column450">
+    <form id="new_card" class="standardForm">
+        <h3>Card Information</h3>
+        <div class="field" required="true">
+            <label for="card_owner">Name</label>
+            <input type="text" id="card_owner" name="card_owner" class="textbox-full" />
+            <span>We need the name of the person on the card</span>
+        </div>
+        <div class="field" required="true" data="numbers">
+            <label for="card_number">Number</label>
+            <input type="text" id="card_number" name="card_number" class="textbox-half" maxlength="19" /><br />
+            <span>Invalid credit card number</span>
+        </div>
+        <div class="field" required="true" data="numbers">
+            <label for="card_cvd">CVD</label>
+            <input type="text" id="card_cvd" name="card_cvd" class="textbox-small" maxlength="4" /><br />
+            <span>We need the 3 or 4 digit security code on the card</span>
+        </div>
+        <div class="field" required="true" data="expiry">
+            <label for="exp_month">Expiry</label>
+            <input type="text" id="exp_month" name="exp_month" class="textbox-small" maxlength="2" /> /
+            <input type="text" id="exp_year" name="exp_year" class="textbox-small" maxlength="2" /><br />
+            <span>Needs to be in the future</span>
+        </div>
+        <h3>Your Information</h3>
+        <div class="field" required="true" data="email">
+            <label for="email_address">E-mail</label>
+            <input type="text" id="email_address" name="email_address" class="textbox-full" />
+            <span>We need an email address in case we need to contact you regarding your payment</span>
+        </div>
+        <div class="field">
+            <label for="phone_number">Phone Number</label>
+            <input type="text" id="phone_number" name="phone_number" class="textbox-full" />
+            <span>Phone number required</span>
+        </div>
+        <div class="field" required="true">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" class="textbox-full" />
+            <span>All address fields are required</span>
+        </div>
+        <div class="field" required="true">
+            <label for="province" id="province_label">Province / State</label>
+            <input type="text" id="province" name="province" class="textbox-full" />
+            <span>All address fields are required</span>
+        </div>
+        <div class="field" required="true">
+            <label for="address_1">Address</label>
+            <input type="text" id="address_1" name="address_1" class="textbox-full" /> <br />
+            <input type="text" id="address_2" name="address_2" class="textbox-full" />
+            <span>For security, what is the address registered to the card?</span>
+        </div>
+        <div class="field" required="true">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" class="textbox-full" />
+            <span>All address fields are required</span>
+        </div>
+        <div class="field" required="true">
+            <label for="postal_code" id="postal_code_label">Zip / Postal Code</label>
+            <input type="text" id="postal_code" name="postal_code" class="textbox-full" />
+            <span>All address fields are required</span>
+        </div>
+        <a href="#" class="submit" >Submit</a>
+    </form>
+</div>

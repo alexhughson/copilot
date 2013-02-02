@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Content Container -->
+<div id="content">
+    <!-- normal Content Container -->
+    <div class="wide">
+        <div class="top"></div>
+        <div class="txt">
+            {% block sole_column %}
+
+            {% endblock sole_column %}
+        </div>
+        <div class="normal_bottom"></div>
+    </div>
+    <!-- End Normal Content -->
+</div>
+</div>
+<!-- Page Container -->
+{% endblock content %}

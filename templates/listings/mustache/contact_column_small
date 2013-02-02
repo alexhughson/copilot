@@ -1,0 +1,28 @@
+<div class="column column300 last">
+    <h5>Contact me</h5>
+    <p>
+        {{#phone}}
+        <strong>By phone</strong><br />
+        {{phone}}
+        <br /><br />
+        {{/phone}}
+        {{#email}}
+        <strong>By email</strong><br />
+        <a href="mailto:{{email}}?subject:Inquiry about {{business.full_name}}">{{email}}</a>
+        {{/email}}
+    </p>
+    <p>
+        <a href="{{get_google_maps_link}}" target="_new">
+            <img src="{{get_small_business_address_url}}" class="border-thick" /><br />
+        </a>
+        <strong>
+        {{#business.street}}
+            {{business.street}}<br />
+            {{business.city}}, {{business.province}}</strong>
+        {{/business.street}}
+        {{^business.street}}
+            I do business in {{business.city}}, {{business.province}}.
+        {{/business.street}}
+    </p>
+
+</div>

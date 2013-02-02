@@ -1,0 +1,5 @@
+<div>
+<div class="{{#title}}big-{{/title}}message {{ type }} {{no-close}}">
+	{{#title}}<h2>{{ title }}</h2>{{/title}}
+	{{#title}}<p>{{/title}}	{{msg}} {{#title}}</p>{{/title}}
+</div></div>

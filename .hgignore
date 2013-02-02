@@ -1,0 +1,10 @@
+syntax: glob
+.idea*
+*.pyc
+*.orig
+*~
+
+syntax: regexp
+(.*/)?\#[^/]*\#$
+
+

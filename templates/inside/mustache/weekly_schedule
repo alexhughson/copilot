@@ -1,0 +1,12 @@
+<div class="weekly_schedule {{extra_master_class}}">
+    {{#days}}
+    <div class="scheduler_day {{extra_day_class}}">
+        <span class="scheduler_day_title">{{day}}</span>
+        {{#appointments}}
+        <span class="scheduler_day_appointment {{extra_appointment_class}} {{not_available}}" start_time="{{start_time.getTime}}" end_time="{{end_time.getTime}}" appointment_id={{key}}>
+           <time>{{start_time.getTime}}</time> - <time>{{end_time.getTime}}</time>
+        </span>
+        {{/appointments}}
+    </div>
+    {{/days}}
+</div><div class="clear clearfix">&nbsp;</div>

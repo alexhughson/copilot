@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+{% comment %}
+
+{% endcomment %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+		<!-- No Cache -->
+		<meta http-equiv="PRAGMA" content="NO-CACHE"/>
+		<meta http-equiv="Expires" content="Mon, 04 Dec 1999 21:29:02 GMT"/>
+		<!-- End No Cache -->
+
+		<title>
+{% block title %}
+        Contractor Copilot - Administration
+{% endblock title %}
+        </title>
+
+		<meta http-equiv="Content-Language" content="en" />
+
+
+
+		<style type="text/css" media="all">
+{% block stylesheets %}
+			@import url("http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans+Narrow:400,700");
+
+			@import url("/static/js/inside/jwysiwyg/jquery.wysiwyg.css");
+			@import url("/static/js/inside/fancybox/jquery.fancybox-1.3.4.css");
+			@import url("/static/js/inside/jdpicker/jdpicker.css");
+			@import url("/static/js/inside/visualize/css/visualize.css");
+			@import url("/static/js/inside/fullcalendar/fullcalendar.css");
+			@import url("/static/css/inside/datatable.css");
+            @import url("/static/css/contact_us.css");
+			@import url("/static/css/inside/style.css");
+
+			@import url("/static/css/inside/soft-blue.css");
+
+            @import url("/static/css/guiders.css");
+
+{% endblock stylesheets %}
+		</style>
+
+{% block iecompatibility %}
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" type="text/css" href="../static/css/inside/ie.css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="../static/css/inside/ie-old.css" />
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" type="text/css" href="../static/css/inside/ie9.css" />
+		<![endif]-->
+		<!--[if IE]>
+			<script type="text/javascript" src="../static/js/inside/excanvas.js"></script>
+		<![endif]-->
+{% endblock iecompatibility %}
+		<!-- Icons 
+		TODO make some icons, yo
+		<link href="ico/favicon.ico" rel="icon" type="image/ico" />
+		<link href="ico/favicon.ico" rel="shortcut icon" type="image/ico" />
+		<link href="ico/speed-dial.png" rel="apple-touch-icon" type="image/png" />
+		<link href="ico/speed-dial.png" rel="icon" type="image/png" />
+		<link href="ico/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png" />
+		 End Icons -->
+
+	</head>
+	<body>
+		<div class="page soft-blue">
+{% block header %}
+			<div class="header">
+                <a href="#profile">
+                    <h2>
+                        <a href="#profile">
+                            <img src="/static/img/inside/logo.png" alt="Logo" id="link_back_to_profile" />
+                        </a>
+                    </h2>
+
+
+				<ul class="main-menu" id="top-bar-menu">
+					<li><a href="#profile">Profile</a></li>
+				</ul>
+
+				<ul class="secondary-menu">
+					<li>
+						<a href="" class="user-menu-link">
+							<img src="../static/img/inside/header-menu-user.png" alt="" />
+							<span class="number" id="user_new_items" style="display: none">0</span>
+						</a>
+						<div class="user-menu">
+							<div class="details">
+								<!--<div class="image">
+									&nbsp;
+								</div>-->
+								<div class="info">
+									<h3><a href="" id="user_name">User name</a></h3>
+                                    <!--	<ul>
+                                                 <li class="email"><a href="" id="user_email">mail@mail.com</a></li>
+                                                 <li><a href="" id="user_notifications">Private messages</a></li>
+									</ul>-->
+								</div>
+							</div>
+							<ul class="menu">
+								<!--<li><a href="#">Change my Account Information</a></li>
+								<li><a href="#">Edit My Profile</a></li>-->
+								<li><a href="../auth/logout">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+                    <!--
+					<li>
+						<a href="" class="search-menu-link"><img src="../static/img/inside/header-menu-search.png" alt="" /></a>
+						<div class="search-menu">
+							<div class="details">
+								<label for="header-search-input">Search</label>
+								<input type="text" value="" id="header-search-input" />
+								<img class="loader" src="../static/img/inside/ajax-loader.gif" alt="" />
+							</div>
+						</div>
+					</li>
+                    -->
+                    <li id="help_link">
+                        <a href="" class="help-menu-link"><img src="../static/img/inside/header-menu-help.png" alt="" /></a>
+                        <div class="help-menu"></div>
+                    </li>
+				</ul>
+
+			</div>
+{% endblock header %}
+            <div class="middle grid" id="message_container">
+                <div class="columnn grid-16">
+                    <div id="message_here">
+                    </div>
+                </div>
+            </div>
+            <div class="middle grid" id="main_content">
+{% block content %}
+{% endblock content %}
+            </div>
+            <div class="clear">&nbsp;</div>
+{% block footer %}
+			<div class="footer">
+				<div class="left">
+					Contractor management dashboard
+				</div>
+				<div class="right">
+					Copyright 2012 Contractor Copilot
+				</div>
+			</div> <!-- Footer -->
+{% endblock footer %}
+		</div>
+{% block javascript %}
+        <script type="text/javascript" src="/static/js/google_analytics.js"></script>
+		<script type="text/javascript" src="../static/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../static/js/guiders.jquery.js"></script>
+        <script type="text/javascript" src="../static/js/inside/inside_tutorial.js"></script>
+		<script type="text/javascript" src="../static/js/inside/wrappers.js"></script>
+
+		<script type="text/javascript" src="../static/js/inside/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery.uniform/jquery.uniform.min.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery-css-transform.js"></script>
+		<script type="text/javascript" src="../static/js/inside/humane.js"></script>
+		<script type="text/javascript" src="../static/js/inside/rotate3Di.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jwysiwyg/jquery.wysiwyg.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jdpicker/jquery.jdpicker.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery.hotkeys.js"></script>
+		<script type="text/javascript" src="../static/js/inside/tap-or-click.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery.datatable/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery-validation-1.8.1/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="../static/js/inside/jquery.detectmobilebrowser.js"></script>
+    <script type="text/javascript" src="/static/js/user_login.js"></script>
+		<script type="text/javascript" src="../static/js/inside/visualize/visualize.jQuery.js"></script>
+		<script type="text/javascript" src="../static/js/inside/visualize/jquery.visualize.tooltip.js"></script>
+		<script type="text/javascript" src="../static/js/inside/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+		<script type="text/javascript" src="../static/js/inside/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/static/js/inside/customer_list.js"></script>
+    <script type="text/javascript" src="/static/js/listings/user_messages.js"></script>
+    <script type="text/javascript" src="/static/js/listings/booking_list.js"></script>
+    <script type="text/javascript" src="/static/js/inside/contractor_transactor.js"></script>
+    <script type="text/javascript" src="/static/js/contact_form.js"></script>
+		<script type="text/javascript" src="../static/js/inside/main.js"></script>
+		<script type="text/javascript" src="../static/js/icanhaz.min.js"></script>
+		<script type="text/javascript" src="../static/js/inside/copilot_custom.js"></script>
+		<script type="text/javascript" src="../static/js/inside/ViewController.js"></script>
+		<script type="text/javascript" src="../static/js/inside/User.js"></script>
+		<script type="text/javascript" src="../static/js/util.js"></script>
+        <script type="text/javascript" src="../static/js/flow_metrics.js"></script>
+
+{% endblock javascript %}
+	</body>
+</html>

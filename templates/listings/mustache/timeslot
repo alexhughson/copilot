@@ -1,0 +1,10 @@
+<div class="sch_slot">
+    <div class="start_time">
+{{ start }}
+    </div>
+    until
+    <div class="end_time">
+{{ end }}
+    </div>
+
+</div>

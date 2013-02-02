@@ -1,0 +1,66 @@
+<div class="column grid-16">
+    <div class="block">
+	    <div class="top">
+            {{#business}}
+                <h2>Edit business deatils</h2>
+            {{/business}}
+            {{^business}}
+    		    <h2>Get started with a new business</h2>
+            {{/business}}
+	    </div>
+
+	    <div class="content grid">
+            <div class="column grid-16">
+                {{^business}}
+                
+                    {{#first_business}}
+                        <p>Welcome to Contractor Copilot!  We're really excited to get to know a bit more about what you're bringing to market - it won't take more than a minute and we'll help you get
+                        acquanted with everything as soon as you're done.</p>
+                    {{/first_business}}
+                    {{^first_business}}
+                        <p>Bringing in another business?  That's great!  You know the deal - just tell us a bit more about what you're doing and we'll handle the rest.  We'll skip the tutorial after, but
+                        if you'd like a refresher on how everything works just remember there's a help button in the top right.</p>
+                    {{/first_business}}
+                
+                {{/business}}
+                <p>Remember, you can change all of this at any point in the future.</p>
+            </div>
+		    <div class="column grid-16">
+                <form action="#">
+                    <input type="hidden" id="edit_business_key" value="{{business.key}}"></input>
+                    <p>
+				        <label>Your business name</label><br/>
+				        <input class="text medium" type="text" value="{{business.full_name}}" name="" id="edit_business_name"  />
+				        <small>Your customers will see this name.</small>
+                    </p>
+
+                    <p>
+				        <label>On your dashboard, what would you like this business to be called?</label><br/>
+				        <input class="text small" type="text" value="{{business.short_name}}" name="" id="edit_business_short_name" custom="" />
+				        <small>You might be called "Wacky Jacksons Emporium of Pool supplies" to customers, but call yourself 'Pool Company' for ease of use.</small>
+                    </p>
+                    <fieldset>
+                        <legend>Address</legend>
+                        <p>You don't have to provide us with your street address, however your customized site will look a heck of a lot better if you do.  We do require the Country, Province, and City in which you'll be doing business.  If you plan on doing business in multiple cities, put down the biggest one.</p>
+                        {{> edit_address}}
+                        <div class="column grid-6">
+                            <img style="width: 300px; height: 300px; border: 1px solid black" id="address_image" src="http://maps.googleapis.com/maps/api/staticmap?center=world&zoom=1&size=300x300&maptype=roadmap&sensor=false"/>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+                    </fieldset>
+                    <p>
+                        <label>What does your business do?</label><br />
+                        <h3 style="display: inline"><span style="font-family: serif;">I</span>&nbsp;</h3><input type="text" class="text small" id="edit_business_does" value="{{business.does}}" /><br />
+                        <small>Try for a two word description of your business such as "fix computers" or "teach dance".</small>
+                    </p>
+
+
+					<input type="button" class="button" value="{{#business}}Save Changes{{/business}}{{^business}}Create Business{{/business}}" id="create_edit_business" />
+                </form>
+		    </div>
+		    <div class="clear">&nbsp;</div>
+
+	    </div>
+
+    </div>
+</div>

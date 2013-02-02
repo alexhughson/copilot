@@ -1,0 +1,104 @@
+h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: left;
+    font-size: 1.25em !important;
+    padding-bottom: .5em !important;
+    color: #484846;
+}
+
+h2 {
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: left;
+    font-size: 1.1em !important;
+    color: #484846;
+}
+
+h3 {
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: left;
+    font-size: 1em !important;
+    padding-left: .2em !important;
+    padding-top: .2em !important;
+    color: #484846;
+}
+
+p {
+    font-family: Arial, Gadget, sans-serif;
+    text-align: left;
+    padding-bottom: 1em !important;
+    line-height: 1.2;
+    font-size: .9em !important;
+}
+
+a {
+    text-decoration: none;
+    color: #2294D2;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+html {
+    background-color: #EFEFEF !important;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Gadget, sans-serif;
+    width: 1000px;
+    position: absolute;
+    margin-left: 50% !important;
+    left: -600px;
+    background-color: #FFFFFF !important;
+    border-left: 5px #ECECEC solid !important;
+    border-right: 5px #ECECEC solid !important;
+    height: 100%;
+}
+
+#main_logo{
+    padding-bottom: 40px;
+    padding-top: 75px;
+    padding-left: 150px;
+}
+
+.column {
+    float: left;
+    padding: 20px;
+}
+
+.contact_card img{
+    float: left;
+    border: 1px solid #BBBBBB;
+    margin-right: 10px;
+}
+
+em {
+    color: #333333;
+    font-size: .9em !important;
+}
+
+ul {
+    display: block;
+    margin-top: 7px !important;
+}
+
+li {
+    font-size: .75em !important;
+    padding-bottom: .2em !important;
+}
+
+.contact_card {
+    display: block;
+    clear: both;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background-color: #DDDDDD;
+    border: 1px solid #BBBBBB;
+    width: 340px;
+    overflow: visible;
+    height: 94px;
+    text-align: left;
+}

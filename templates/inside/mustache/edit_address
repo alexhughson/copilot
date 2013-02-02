@@ -1,0 +1,21 @@
+<div class="column grid-10" id="address_details">
+    <p>
+        <label>Country</label><br />
+        <select id="edit_business_address_country">
+            <option location="canada">Canada</option>
+        </select>
+    </p>
+    <p>
+        <label id="provice_or_state">Province / State</label><br />
+        <input class="text big" type="text" id="edit_business_address_province" value="{{business.province}}" />
+    </p>
+    <p>
+        <label>City</label><br />
+        <input class="text big" type="text" id="edit_business_address_city" value="{{business.city}}"/>
+    </p>
+    <p>
+        <label>Street address</label><br />
+        <input class="text big" type="text" id="edit_business_address_street" value="{{business.street}}" />
+    </p>
+
+</div>

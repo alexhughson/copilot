@@ -1,0 +1,22 @@
+<div class="column column600">            	
+    <ul class="large">
+	    <li class="line">
+        	<a class="information" href="#about">
+            	<span class="heading">Who am I?</span>
+                <span><strong>{{about_me_leader}}</strong></span>
+            </a>
+        </li>
+        <li class="line">
+        	<a class="check" href="#business">
+            	<span class="heading">Here's what I can do for you.</span>
+                <span><strong>{{about_business_leader}}</strong></span>
+            </a>
+        </li>
+        <li>
+        	<a class="person" href="#schedule">
+            	<span class="heading">Let me know when I can be there for you.</span>
+                <span><strong>{{schedule_summary_leader}}</strong></span>
+            </a>
+        </li>
+    </ul>
+</div>

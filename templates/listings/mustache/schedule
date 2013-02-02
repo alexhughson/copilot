@@ -1,0 +1,18 @@
+<div class="column column600">            	
+    <h2>Schedule me</h2>
+    <h3>My Availability</h3>
+    <p>{{{schedule_summary}}}</p>
+    <h3>Scheduler</h3>
+    <p>
+        Here's when I'm available.  To schedule me in, just click an available time slot
+        and enter in your contact information.  I'll confirm the appointment as soon
+        as I can and follow up with your information.
+    </p>
+    <hr />
+    {{> weekly_schedule }}
+    <div id="place_scheduler_here"></div>
+    <hr />
+    <p>
+        Feel free to contact me via email if you need time outside this schedule.
+    </p>
+</div>

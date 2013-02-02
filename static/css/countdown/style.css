@@ -1,0 +1,225 @@
+/** Simple CSS Reset
+_____________________________________________________________________________*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+/** Body
+_____________________________________________________________________________*/
+body {
+	background: #3d8eff url("../../img/countdown/bg.jpg");
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+/** Floats
+_____________________________________________________________________________*/
+.clear {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/** Main Typography
+_____________________________________________________________________________*/
+
+h1 {
+	font-size: 62px;
+	color: #3d8eff;
+	margin: -10px 0 8px 0;
+	text-align: center;
+	font-weight: normal;
+}
+h3 {
+	font-size: 21px;
+	font-weight: normal;
+	text-align: center;
+	color: #285ca6;
+	margin: 0 0 7px 0;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #808080;
+	margin: 0 0 7px 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+hr {
+	display: block;
+	border: none;
+	width: 480px;
+	height: 2px;
+	margin: 0 auto 23px auto;
+	background: url(../../img/countdown/divider.gif);
+}
+
+/** Container¨¨
+_____________________________________________________________________________*/
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/** Header
+_____________________________________________________________________________*/
+#header {
+	height: 175px;
+}
+#logo {
+    margin-top: 60px;
+    padding-left: 100px;
+	text-align: center;
+}
+
+/** Main Background
+_____________________________________________________________________________*/
+#content {
+	display: block;
+	height: 335px;
+	padding: 50px;
+	background: url("../../img/countdown/content_bg.png");
+	background-repeat: no-repeat;
+}
+
+/** Main Content
+_____________________________________________________________________________*/
+#main {
+	width: 555px;
+	overflow: hidden;
+}  
+#main p {
+	margin: 0 0 20px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	text-align: center;
+	color: #808080;
+	line-height: 30px;
+}
+#main a:link {
+	padding: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #666666;
+	background: #cccccc;
+}
+#main a:visited {
+	padding: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #808080;
+	background: #cccccc;
+}
+#main a:hover {
+	color: #285ca6;
+	background: #fff;
+}
+#counter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #285ca6;
+	margin-bottom: 12px;
+}
+
+/** Sidebar Content
+_____________________________________________________________________________*/
+#sidebar {
+	width: 255px;
+	height: 335px;
+	overflow: hidden;
+}
+#sidebar p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #808080;
+	line-height: 17px;
+}
+
+/** Pie Chart
+_____________________________________________________________________________*/
+#chart {
+	width: 226px;
+	height: 226px;
+	margin: 9px;
+	background-repeat: no-repeat;
+}
+.ten {
+	background: url("../../img/countdown/chart-10.png");
+}  
+.twenty {
+	background: url("../../img/countdown/chart-20.png");
+}  
+.thirty {
+	background: url("../../img/countdown/chart-30.png");
+}  
+.forty {
+	background: url("../../img/countdown/chart-40.png");
+}  
+.fifty {
+	background: url("../../img/countdown/chart-50.png");
+}  
+.sixty {
+	background: url("../../img/countdown/chart-60.png");
+}  
+.seventy {
+	background: url("../../img/countdown/chart-70.png");
+}  
+.eighty {
+	background: url("../../img/countdown/chart-80.png");
+}  
+.ninety {
+	background: url("../../img/countdown/chart-90.png");
+}  
+
+/** Footer
+_____________________________________________________________________________*/
+#footer {
+	margin: 5px 15px 0 15px;
+}
+#social_networking {
+	float: left;
+}
+#social_networking img {
+	margin: 0 10px 0 0;
+}
+#contact_form {
+	float: right;
+	width: 293px;
+}
+
+/** Form
+_____________________________________________________________________________*/
+#submit {
+	float: right;
+}
+#email {
+	float: left;
+	margin-right: 10px;
+	height: 27px;
+	width: 195px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #808080;
+}
+#code {
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #fff;
+}

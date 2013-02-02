@@ -1,0 +1,33 @@
+<div class="sch_calendar">
+    <div class="error" style="display:none">
+        <span>Sorry, I'm really busy at the moment and don't have any free regular slots.  Send me a message below and I'll
+        see what I can do to fit you in.</span>
+    </div>
+    <div class="find_date">
+        <h4>Book an appointment</h4>
+        <div class="when">
+            <h5>Week of <span id="week_date"></span></h5>
+            <a href="#" onclick="event.preventDefault()" class="sooner">Previous week</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="event.preventDefault()" class="later">Next week</a>
+        </div><br />
+        <div class="avb">
+
+        </div>
+    </div>
+    <div class="zoom_booker" style="display:none">
+        <h4>Request a booking on <span class="day"></span></h4>
+        <div class="field" style="float: left; margin-right: 30px">
+            <label>Book from</label>
+            <input class="start_time textbox-medium" type="text" />
+        </div>
+        <div class="field" style="float: left; margin-right: 30px">
+            <label>Book until</label>
+            <input class="end_time textbox-medium" type="text" />
+        </div>
+        <div class="clearfix">&nbsp;</div>
+    </div>
+</div><br />
+<div class="hr_with_message" id="silly_or_breaker">
+    <hr />
+    <h4>Or...</h4>
+</div>
+<h4 id="send_message_leader">Send a message</h4>

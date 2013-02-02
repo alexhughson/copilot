@@ -1,0 +1,27 @@
+application: contractorcopilot
+version: 1
+api_version: 1
+runtime: python
+
+inbound_services:
+- mail
+
+handlers:
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /static
+  static_dir: static
+
+- url: /backend/profile/.*
+  script: profile_backend.py
+
+- url: /_ah/mail/.+
+  script: email_handler.py
+
+- url: /.*
+  script: main.py
+  secure: optional
+

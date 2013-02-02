@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>{% block title %}Local listing{% endblock title %}</title>
+
+    {% block css %}
+        <link type="text/css" href="/static/css/timePicker.css" rel="stylesheet" />
+        <link type="text/css" href="/static/css/listings/screen.css" media="screen" rel="stylesheet"/>
+        <link type="text/css" href="/static/css/listings/print.css" media="print" rel="stylesheet"/>
+        <link type="text/css" href="/static/css/contact_us.css" media="screen" rel="stylesheet" />
+    {% endblock css %}
+
+    {% block javascript %}
+        <script type="text/javascript" src="/static/js/google_analytics.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery_extensions.js"></script>
+
+        <script type="text/javascript" src="/static/js/icanhaz.min.js"></script>
+        <script type="text/javascript" src="/static/js/listings/jquery.lightbox-0.5.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.timePicker.min.js"></script>
+        <script type="text/javascript" src="/static/js/util.js"></script>
+        <script type="text/javascript" src="/static/js/contact_form.js"></script>
+        <script type="text/javascript" src="/static/js/listings/user_messages.js"></script>
+        <script type="text/javascript" src="/static/js/listings/booking_list.js"></script>
+        <script type="text/javascript" src="/static/js/schedule_lib.js"></script>
+        <script type="text/javascript" src="/static/js/listings/general.js"></script>
+        <script type="text/javascript" src="/static/js/listings/PageData.js"></script>
+        <script type="text/javascript" src="/static/js/listings/copilot.js"></script>
+        <script type="text/javascript" src="/static/js/listings/transactor.js"></script>
+        <script type="text/javascript" src="/static/js/user_login.js"></script>
+        <script type="text/javascript" src="/static/js/listings/ViewController.js"></script>
+    {% endblock javascript %}
+</head>
+<body>
+
+<div id="outer">
+
+    <div class="contentwidth main">
+
+        {% block logo %}
+            <div class="logo">
+                <h1><a href="#home">{% block logo_text %}Business name{% endblock logo_text %}</a></h1>
+            </div><!-- end logo -->
+        {% endblock logo %}
+
+        {% block menu %}
+            <div class="menu">
+                <ul class="clearfix">
+                    {% block menulinks %}
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Who i am</a></li>
+                        <li><a href="#business">What i do</a></li>
+                        <li><a href="#schedule">Book appointment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#pay">Pay</a></li>
+                    {% endblock menulinks %}
+                </ul>
+            </div><!-- end menu -->
+        {% endblock menu %}
+
+        <!-- column container -->
+        <div class="clearfix" id="content_here">
+            {% block maincontent %}
+
+            {% endblock maincontent %}
+        </div>
+        <!-- end column container -->
+
+
+    </div>
+    <!-- end contentwidth -->
+
+    <div class="footer">
+
+        <div class="contentwidth">
+            {% block footer %}
+
+            {% endblock footer %}
+        </div>
+    </div>
+    <!-- end footer -->
+
+
+</div>
+<!-- end outer -->
+
+</body>
+</html>

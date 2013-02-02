@@ -1,0 +1,22 @@
+if ( schedule.length == 0 ) {
+        error_mode();
+        return;
+        }
+        var section = $ret.find(".avb");
+        section.html("");
+
+        var days = {};
+        for(var i = 0; i < 7; i++){
+        days[i] = {appointments:{}};
+        }
+
+        $.each(schedule, function(i, appointment) {
+
+        var day_of_week = new Date(appointment.start).getDay();
+        days[day_of_week].appointments[] = {};
+        days[day_of_week].appointments[ days[day_of_week].appointments.length ].start_date = new Date(appointment.start);
+        days[day_of_week].appointments[ days[day_of_week].appointments.length ].end_date = new Date(appointment.end);
+
+        last_opening = appointment;
+        });
+

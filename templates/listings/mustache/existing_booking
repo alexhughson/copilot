@@ -1,0 +1,33 @@
+<div class="existing_booking">
+    <strong>Booking on <date>{{ start_time }}</date></strong><br />
+    <time class="start">{{ start_time }}</time> to <time class="end">{{  end_time  }}</time>
+    <br />
+    {{^approved}}
+    We're currently waiting on you to approve this appointment -
+    <a href="#" class="approve">Approve now</a><br />
+    {{/approved }}
+
+    {{^other_party_approved }}
+    We're {{^approved}}also {{/approved}} waiting on the other party to approve this appointment.<br />
+    {{/other_party_approved }}
+
+    {{#approved}}
+        {{#other_party_approved}}
+            Everyone has approved the appointment!  Make sure you're on time!<br />
+        {{/other_party_approved}}
+    {{/approved}}
+    <a href="#" class="delete">
+    {{#approved}}
+        {{#other_party_approved}}
+            Cancel appointment
+        {{/other_party_approved}}
+        {{^other_party_approved}}
+            Cancel request
+        {{/other_party_approved}}
+    {{/approved}}
+    {{^approved}}
+        Decline appointment
+    {{/approved}}
+    </a>
+    <br /><br />
+</div>

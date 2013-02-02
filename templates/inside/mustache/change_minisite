@@ -1,0 +1,320 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>{{business.short_name}}</h2>
+        </div>
+        
+        <div class="content">
+            <form action="#">
+
+{{! URL }}
+            {{^url}}
+                <h4>First things first!</h4>
+                <p>
+                    We're more than happy to host your site for free.  Your site 
+                    is more than just a basic 'who-am-i' type page - it provides
+                    scheduling options, is localized to where you do business, and 
+                    allows you to take credit card and debit card payments.
+                </p>
+                <p>
+                    By default, your site is hosted at <strong>contractorcopilot.com/c/YourBusinessHere</strong>.
+                    The <strong>YourBusinessHere</strong> can be switched to whatever
+                    you like, but it needs to be unique.  Unfortunately, if you're
+                    running 'Bobs Lawncare', there might be another 'Bobs Lawncare'
+                    in another city and they may have taken 'BobsLawncare' already.
+                    If you're running into issues, try something like LawncareInToronto,
+                    or TorontoBobsLawncare.
+                </p>
+            {{/url}}
+            {{#url}}
+                <p>
+                    You're free to change your sites URL, but we strongly advise
+                    against it.  Your customers may have already bookmarked your
+                    site and changing it here could lead to them being unable
+                    to find you.
+                </p>
+            {{/url}}
+                <hr />
+                <h3>Administrative stuff</h3>
+                <p>
+                    <label>Free business website URL</label><br />
+                    <input tabindex=1 type="text" class="text medium" value="{{#url}}{{url}}{{/url}}{{^url}}{{business.short_name}}{{/url}}" id="new_url" /><small id="url_available" class="inline">URL Available</small>
+                    <br />
+                    <big>http://contractorcopilot.com/c/<span id="copy_url_here"></span></big><br /><br />
+                    Would you prefer a website with a URL like YourBusiness.com?  Send us a quick email at <a href="mailto:urls@contractorcopilot.com">urls@contractorcopilot.com</a> and we will get back to you within 1 day.
+                </p>
+                <p>
+                    <label>Enable/Disable site</label><br />
+                    <label><input tabindex=2 type="radio" name="enable_disable" value="True" {{^url}}checked="checked"{{/url}}{{#enabled}}checked="checked"{{/enabled}} />Enabled</label><br />
+                    <label><input tabindex=3 type="radio" name="enable_disable" value="False" {{#url}}{{^enabled}}checked="checked"{{/enabled}}{{/url}} />Disabled</label><br />
+                    <small>If you'd like you can temporarily disable your custom site.  By default it is enabled.</small>
+                </p>
+                <hr />
+                <h3>Site Content</h3>
+                <div id="about_me">
+                    <label>Tell us a bit about yourself</label>
+                    <textarea tabindex=4 rows='10'>
+{{about_me}}
+</textarea>
+
+                    <p><a href="#" function="help">What should I put here?</a></p>
+                    <div class="grid" style="display: none">
+                        <hr />
+                        <div class="column grid-8">
+                            <h4>Here's what this is for</h4>
+                            <p>
+                                The about me section is your chance to sell 
+                                yourself.  Why should someone hire you?  Do you 
+                                have any qualificaitons or certificates?  Have 
+                                you lived in the area long?  Try to write about
+                                two or three paragraphs about yourself.
+                            </p>
+                            <p>
+                                This should be where you make your 'sales pitch'.  
+                                The next section is where you describe your 
+                                services and why you do them the best, so avoid 
+                                talking about that here.  The first paragraph 
+                                (up to the first time you press enter) will be 
+                                featured on your homepage, so try to keep it to 
+                                2-3 sentences.
+                        </div>
+                        <div class="column grid-8">
+                            <h4>Example</h4>
+                            <p>
+                                My name's Greg, and I'm a computer genius.  I was
+                                born right here in Toronto I guarantee that I can
+                                fix your computer problem.
+                            </p>
+                            <p>
+                                I've been fixing computers on and off for family
+                                and friends for as long as they've had them.  In
+                                that time I've seen and fixed pretty much anything
+                                that can go wrong with a Windows machine.  This
+                                includes both hardware and software issues.
+                            </p>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                
+                <div id="about_business">
+                    <label>Tell us a bit about your business</label>
+                    <textarea tabindex=5 rows='10'>
+{{about_business}}
+</textarea>
+                    <p><a href="#" function="help">What should I put here?</a></p>
+                    <div class="grid" style="display: none">
+                        <hr />
+                        <div class="column grid-8">
+                            <h4>Here's what this is for</h4>
+                                <p>
+                                    This section is meant to allow you to describe
+                                    what you do.  Talk about price and services here.
+                                    You'll find that Contractor Copilot is about 
+                                    selling a specific service or skill, if you 
+                                    want to sell 5 or 6 different things it might be 
+                                    better to talk to a customer in person about that.
+                                </p>
+                                <p>
+                                    The first paragraph (all text until you press 
+                                    enter) will be featured on your home page, so
+                                    keep that brief and to the point.  You might
+                                    not want to talk about price during that first
+                                    paragraph unless you just have one main service
+                                    and want to highlight it right away.
+                                </p>
+                                <p>
+                                    Generally, you should structure this page with
+                                    a paragraph per product or service.  Explain
+                                    what you can do with a bit of a sales pitch, but
+                                    leave the main sales type stuff for the section
+                                    above.  State your terms of service (time frames,
+                                    where the work is done, payment up front/upon
+                                    completion, prefer credit cards etc) here
+                                </p>
+                        </div>
+                        <div class="column grid-8">
+                            <h4>Example</h4>
+                            <p>
+                                I specialize in computer repair and service.  I
+                                can get your computer running like new with a very
+                                fast turn around time.
+                            </p>
+                            <p>
+                                I'll perform a diagnosis free of charge the first
+                                time we meet.  I'll remove viruses and spyware,
+                                install upgrades, fix broken hardware, and do
+                                general repair.  I can gurantee you a 24 hour
+                                turn around for diagnosis and 48 hours to fix any
+                                problem (unless it takes time to order parts).
+                            </p>
+                            <p>
+                                I charge a flat rate of $50 per job completed.  
+                                If new hardware is required or requested I will
+                                get the best price I can before providing you
+                                with a quote.  If you approve it, I'll purchase
+                                the hardware and install it and add the cost to 
+                                the bill.  If you'd like to purchase the hardware
+                                yourself I will install it for you for an extra 
+                                $20 per device.
+                            </p>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                
+                <div id="schedule_summary">
+                    <label>Could you summarize your schedule?</label>
+                    <textarea tabindex=6 rows='5'>
+{{schedule_summary}}
+</textarea>
+                    <p><a href="#" function="help">What should I put here?</a></p>
+                    <div class="grid" style="display: none">
+                        <hr />
+                        <div class="column grid-8">
+                            <h4>Here's what this is for</h4>
+                            <p>
+]                               This section is meant to give your customers a 
+                                general overview of what your schedule looks like.
+                                We provide a scheduling service for you where you
+                                can put down precise times that you are available,
+                                this will be the lead up text to it.
+                            </p>
+                            <p>
+                                One or two paragraphs is tons here.  The first paragraph
+                                will be featured on your homepage, so make sure it's
+                                just a sentence or two of general overview.  Use
+                                the second paragraph if needed to explain your schedule
+                                if it's really wacky.  You may also wish to 
+                                put down your prefered contact and booking method.
+                            </p>
+                        </div>
+                        <div class="column grid-8">
+                            <h4>Example</h4>
+                            <p>
+                                I'm available weekdays from 6pm to 8pm with one
+                                days notice.  I can also make time on weekends if
+                                you book early.
+                            </p>
+                            <p>
+                                The only exception to this is for the last week in
+                                a month.  Unfortunately I won't be able to help
+                                you out on Tuesdays or Thursdays that week due
+                                to family commitments.  Send me an email and I'll
+                                get back ASAP, however if you would like to book
+                                an apointment use the booker below.
+                            </p>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <hr />
+                <h3>Your Information</h3>
+                <p>By default we've filled this out with your profile information.
+                let us know what you're comfortable making public and we'll only 
+                publish that information.  All of this is optional, if no data
+                is entered then it will not be displayed on your site.</p>
+                <p>
+                    <label>Email address</label><br />
+                    <input tabindex=7 type="text" class="text medium" id="email" value="{{#url}}{{email}}{{/url}}{{^url}}{{business.owner.email}}{{/url}}" />
+                </p>
+                <p>
+                    <label>Phone number</label><br />
+                    <input tabindex=8 type="text" class="text small" id="phone" value="{{#url}}{{phone}}{{/url}}{{^url}}{{business.owner.phone}}{{/url}}">
+                    <small>Must be in the format 1 (555) 555 5555.  If left empty no number will be shown.</small>
+                </p>
+                {{#never_show_comment}}
+                <p>
+                    <label>Are you ok with us showing your address?</label><br />
+			        <label><input type="radio" name="show_address" value="True" {{#show_address}}checked="checked"{{/show_address}} />Yes</label><br/>
+			        <label><input type="radio" name="show_address" value="False" {{#url}}{{^show_address}}checked="checked"{{/show_address}}{{/url}}/>No</label>
+			        <small>If you're not ok with us showing your address, we'll 
+			        just show a map of your city with your phone number
+			        and email.  If you are ok with us showing your address, we'll
+			        say that you prefer being contacted by email, phone, or the 
+			        scheduler before dropping in.</small>
+			    </p>
+			    {{/never_show_comment}}
+			    <hr />
+			    {{#never_show_comment}}
+			    Future picture support.  Didn't add because of MVP and whatnot
+			    <h3>Pictures</h3>
+			    <p>
+	    		    If you'd like, you can suplement your site with a couple pictures.
+    			    These are completely optional.
+			    </p>
+			    <p>
+	    		    As part of our terms of service, you must own the rights to the
+	    		    pictures you're uploading.  If you're not sure if you do or not, just
+	    		    make sure it was you that took the picture and don't just post a
+	    		    picture you found on Google Image search.
+			    </p>
+			    <div class="grid">
+			        <div class="column grid-8">
+    			        <label>Picture of you</label><br />
+	    		        <input type="file" id="about_me_image" /><br />
+	    		        <p>
+    	    		        This picture will be used in the "Who I Am" section.  People
+	        		        are more likely to trust in your business if they can attach
+	        		        a face to the company.  Aim for a picture that suits your 
+	        		        business (offering legal advice should probably be a bit
+	        		        more formal than offering to cut someones grass).
+	        		    </p>
+	    		    </div>
+	    		    <div class="column grid-8">
+	    		        <label>Current picture</label>
+	    		    </div>
+	    	    </div>
+	    	    <div class="clear">&nbsp;</div>
+			    <div class="grid">
+			        <div class="column grid-8">
+			            <label>Picture of your business</label><br />
+			            <input type="file" id="about_business_image" /><br />
+			            <p>
+    			            This picture will be used in the "What I Do" section.  If you
+	    		            sell a product, put your picture here.  If you have a company
+	    		            it may be a good call to put that here instead.  If you're offering
+	    		            a service, a picture of you performing that service would be 
+	    		            pretty fitting.  
+	    		        </p>
+                    </div>
+	    		    <div class="column grid-8">
+	    		        <label>Current picture</label>
+	    		    </div>
+			    </div>
+	    	    <div class="clear">&nbsp;</div>
+			    <p>
+			        <label>Which of the above would you like to show in your Contact Me section?</label><br />
+			        <label><input type="radio" name="contact_me_preference" value="about_me_image" {{#contact_me_preference_check}}about_me_image{{/contact_me_preference_check}} />The picture of me</label><br/>
+			        <label><input type="radio" name="contact_me_preference" value="about_business_image" {{#contact_me_preference_check}}about_me_image{{/contact_me_preference_check}}/>The picture of my business</label>
+			        <label><input type="radio" name="contact_me_preference" value="None" {{#contact_me_preference_check}}about_me_image{{/contact_me_preference_check}}/>Don't show any</label>
+                </p>
+                <hr />
+                
+                {{/never_show_comment}}
+                <h3>Online Payments</h3>
+                <p>
+                    Your minisite comes with a payment form where your customers can pay you via credit card instead
+                    of cash.  This process is simple to use, just direct them to your website and tell them to pay
+                    you under the 'pay' tab.
+                </p>
+                <p>
+                    Once your customer enters their name, email and payment amount, they will be redirected to our
+                    third party payment processor AlertPay.  Once the payment is submit you will receive an email
+                    with the customers information and payment details.
+                </p>
+                <p>
+                    We will be in contact within 24 hours to confirm the payment has gone through.  We wil mail you a
+                    cheque whenever you would like for the full balance.  Email us at any time at payments@contractorcopilot.com
+                    if you have questions.  Please note that their is a 5% fee for all charged transactions.
+                </p>
+                <p>
+                    By pressing the button below you accept these conditions of payment.
+                </p>
+                <input type="button" class="button" value="{{#url}}Update{{/url}}{{^url}}Create{{/url}}" id="change_minisite_submit" />
+            </form>
+        </div>
+</div>

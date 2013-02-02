@@ -1,0 +1,6 @@
+<div class="send_message field">
+    <label>Your message</label>
+    <textarea class="message textarea" cols="75" rows="2"></textarea><br /><br />
+    <button type="button" value="Book appointment" id="send_message_button">Send message</button><br /><br />
+    <p hide_on="contractor">I'll try my best to get back to you within 24 hours.</p>
+</div>

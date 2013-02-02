@@ -1,0 +1,1 @@
+<li><a href="#" onclick="event.preventDefault()" user="{{key}}">{{ email }}</a></li>

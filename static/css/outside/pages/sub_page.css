@@ -1,0 +1,33 @@
+
+/* CONTAINER */
+
+#sub_page #container{
+	width: 942px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+#sub_page #container #header{
+	height: 90px;
+	margin-bottom: 20px;
+}
+
+#media_page #container #header .logo{
+	float: left;
+	width: 256px;
+	height: 66px;
+	margin-left: 0px;
+	margin-top: 21px;
+}
+
+/* CONTENT */
+
+#sub_page #content{
+	clear: both;
+	padding-top: 0px;
+}
+
+#sub_page #content .normal .txt{
+	margin-left: 15px;
+}

@@ -1,0 +1,7 @@
+<div class="contact_message">
+    <span class="from">{{ from }}</span>
+    <span class="title">{{ title }}</span>
+    <p class="message">{message}</p>
+    <!-- TODO: Render ALL the data -->
+</div>
+     

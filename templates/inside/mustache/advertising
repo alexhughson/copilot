@@ -1,0 +1,107 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Advertise your business</h2>
+        </div>
+        <div class="content">
+            <div class="block small" style="float: right; width: 350px">
+                <div class="content">
+                    <fieldset>
+                        <h2>Pricing</h2>
+                        <h3>Contact us for a quote</h3>
+                        <p>
+                            Advertising costs change per city and it really depends on what you'd like.  We'll get back
+                            to you with a quote within 24 hours.
+                        </p>
+                    </fieldset>
+                </div>
+            </div>
+            <br />
+            <p>
+                Advertising your business is the number one way to get more customers, period.
+            </p>
+            <p>
+                We're experts at getting your name out there.  Just tell us what kind of advertising you're looking for
+                and we'll be more than happy to get it set up.  Want to show up number one on Google?  We can do that.
+                Want your ad in the local paper?  We can do that too!  Would you like your ad on telephone poles through
+                the city?  We'll do our best to organize it for you.
+            </p>
+            <p>
+                Once you submit, we'll get back to you within 24 hours with a quote.  With your approval we'll give you
+                a payment link and start the process right away.
+            </p>
+            <div class="grid">
+                <div class="column grid-16">
+                    <h3>
+                        Where are you located?
+                    </h3>
+                    <p>
+                        <fieldset>
+                            <legend>Address</legend>
+                            {{> edit_address}}
+                        </fieldset>
+                    </p>
+                    <input type="hidden" value="{{business.key}}" id="business" />
+                    <h3>
+                        How would you like to advertise?
+                    </h3>
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="column grid-5">
+                    <h4>Offline</h4>
+                    <label><input type="checkbox" ad_method="Newspaper" />Ad in the newspaper</label><br />
+                    <label><input type="checkbox" ad_method="Posters" />Posters around town</label><br />
+                    <label><input type="checkbox" ad_method="Transit" />Transit ads</label><br />
+                    <label><input type="checkbox" ad_method="Billboards" />Billboards</label><br />
+                    <label><input type="checkbox" ad_method="Other - Offline" />Other</label><br />
+                </div>
+                <div class="column grid-5">
+                    <h4>Online</h4>
+                    <label><input type="checkbox" ad_method="Search engine" />Search engine sponsoring</label><br />
+                    <label><input type="checkbox" ad_method="Facebook" />Facebook</label><br />
+                    <label><input type="checkbox" ad_method="Premium business directories" />Premium business directory listings</label><br />
+                    <label><input type="checkbox" ad_method="Web-ads" />In-website ads</label><br />
+                    <label><input type="checkbox" ad_method="Other - Online" />Other</label><br />
+                </div>
+                <div class="column grid-6">
+                    <h4>A note about online ads</h4>
+                    <p>
+                        Online ads are <strong>only</strong> delivered to people in the same city as you.  This means someone
+                        searching for 'computer repair' and is in Santiago will not see your ad for your business in
+                        Kitchener.
+                    </p>
+                </div>
+                <div class="clear">&nbsp;</div>
+                <p class="column grid-16">
+                    <h4>What's your budget?</h4>
+                    <div class="grid">
+                        <div class="column grid-3">
+                            <label><input type="radio" name="budget" value="<$25" />Less than $25</label>
+                        </div>
+                        <div class="column grid-3">
+                            <label><input type="radio" name="budget" value="<$50" />Less than $50</label>
+                        </div>
+                        <div class="column grid-3">
+                            <label><input type="radio" name="budget" value="<$100" />Less than $100</label>
+                        </div>
+                        <div class="column grid-3">
+                            <label><input type="radio" name="budget" value="<$500" />Less than $500</label>
+                        </div>
+                        <div class="column grid-3">
+                            <label><input type="radio" name="budget" value="??" />I'm not sure</label>
+                        </div>
+                    </div>
+                </p>
+                <div class="clear">&nbsp;</div>
+            </div><br />
+            <h4>Anything else you'd like us to know while putting together a quote?</h4>
+            <p>
+                <textarea rows='5' id="ad_notes"></textarea><br />
+                <small>How long you'd like to advertise for, any particular newspapers you like, etc.</small>
+            </p>
+            <div class="clear">&nbsp;</div><br /><hr />
+            <input type="button" class="button" value="Advertise me!" id="submit" /><br /><br />
+            <p>We'll get back to you within 24 hours with a quote.</p>
+        </div>
+    </div>
+</div>

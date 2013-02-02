@@ -1,0 +1,4 @@
+<div class="column column600">            	
+    <h2>I {{business.does}}</h2>
+    <p>{{{about_business}}}</p>
+</div>

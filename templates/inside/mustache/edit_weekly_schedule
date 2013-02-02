@@ -1,0 +1,75 @@
+<div class="col umn grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Edit your Schedule</h2>
+        </div>
+        <div class="content">
+            <p>
+                The scheduler allows customers to book time with you without first confirming times.  This eliminates
+                the back and forth that usually comes with trying to book time with someone.  Just tell us when you're
+                available for customers and we'll fit them in.
+            </p>
+            <p>
+                Whenever a customer books time with you we'll send you an email letting you know when they'd like to book
+                your time.  We'll have a 'confirm' button in the email.  If you're happy with the time, just hit the button.
+                If not, reply to the email and we'll send your response back to the customer.
+            </p>
+            <p>
+                Once you've let us know when you're available, make sure you visit your settings page for your minisite
+                and enable the scheduler.
+            </p>
+            <form>
+                <fieldset id="change_appointment">
+                    <legend>New appointment slot</legend>
+                    <div class="grid">
+                        <div class="column grid-4">
+                            <label>Available from</label><br />
+                            <input type="text" class="text small" id="start_time" />
+                            <select id="start_time_am_pm">
+                                <option value="0">AM</option>
+                                <option value="1">PM</option>
+                            </select>
+                            <div class="select_helper"></div>
+                        </div>
+                        <div class="column grid-4">
+                            <label>Available until</label><br />
+                            <input type="text" class="text small" id="end_time" />
+                            <select id="end_time_am_pm">
+                                <option value="0">AM</option>
+                                <option value="1">PM</option>
+                            </select>
+                            <div class="select_helper"></div>
+                        </div>
+                        <div class="column grid-4">
+                            <label>On</label><br />
+                            <select id="day_selector">
+                                <option value="6">Sundays</option>
+                                <option value="0">Mondays</option>
+                                <option value="1">Tuesdays</option>
+                                <option value="2">Wednesdays</option>
+                                <option value="3">Thursdays</option>
+                                <option value="4">Fridays</option>
+                                <option value="5">Saturdays</option>
+                            </select>
+                        </div>
+                        <div class="column grid-4"><br />
+                            <input type="button" class="button blue" value="Save" id="save_button" />
+                            <input type="button" class="button red" value="Delete" id="delete_button" />
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+            <div class="grid">
+                <div class="column grid-1">
+                    &nbsp;
+                </div>
+                <div class="column grid-15" id="schedule_here">
+                    {{>weekly_schedule}}
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>
+        </div>
+    </div>
+
+</div>

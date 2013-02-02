@@ -1,0 +1,49 @@
+
+#index .leadertext {float:left; margin:50px 0 0 20px; width:450px; }
+#index .leaderimage{float: right; margin:43px 24px 0 0; width: 380px;}
+#index .leadersteps{clear: both; height: 130px; position:relative; top:0px;}
+#index .leadersteps ul li{float:left; line-height:22px; margin:0 26px 0 18px; width:255px;}
+#index .leadersteps ul {margin:0 0 0 0px;}
+#index .leadersteps h2{margin:10px 0 -28px 44px;}
+#index .leadersteps img{float: left;}
+
+
+#corner{display:none;}
+
+#content .normal ul.newsList li {
+float:left;
+padding: 0;
+margin: 0 10px 0 0;
+width:270px !important;
+}
+
+
+#content .normal {
+float:left;
+margin-bottom:0;
+margin-left:0;
+padding: 0;
+margin: 0;
+width:617px !important;
+}
+
+#content .right {
+float:left !important;
+margin-left:0px !important;
+padding: 0;
+position: relative;
+left:20px !important;
+width:280px !important;
+} 
+
+#media_page #content .wide .galleryList div{
+padding-right: 3px !important;
+padding-bottom:6px !important;}
+	
+	
+#content .wide .galleryList div{margin-left: 0px;}
+
+#container{
+	width: 982px !important;
+	margin: 0 auto;
+}

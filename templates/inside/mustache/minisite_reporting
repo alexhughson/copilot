@@ -1,0 +1,100 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Minisite Reporting</h2>
+        </div>
+        <div class="content">
+
+            <div class="vertical-tabs">
+                <div class="tab-list">
+                    <ul>
+                        <li class="active">
+                            <a href="side-tab-1">Daily</a>
+                        </li>
+                        <li>
+                            <a href="side-tab-2">Weekly</a>
+                        </li>
+                        <li>
+                            <a href="side-tab-3">Monthly</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Time periods are from now, not from midnight
+                    </p>
+                </div>
+                <div id="side-tab-1" class="right-tab">
+                    <div class="grid">
+                        <div class="column grid-5 centered">
+                            <h4>This 24 hours</h4><br />
+                            <h1>{{data.day.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.day.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Last 24 hours</h4><br />
+                            <h1>{{data.last_day.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.last_day.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Change</h4><br />
+                            <h1>{{text.day.visitor-change-direction}}{{change.day.visitors}}</h1> visitors<br /><br />
+                            <h1>{{text.day.total-change-direction}}{{change.day.total}}</h1> pages opened<br />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="side-tab-2" class="right-tab">
+                    <div class="grid">
+                        <div class="column grid-5 centered">
+                            <h4>These 7 days</h4><br />
+                            <h1>{{data.week.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.week.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Last 7 days</h4><br />
+                            <h1>{{data.last_week.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.last_week.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Change</h4><br />
+                            <h1>{{text.week.visitor-change-direction}}{{change.week.visitors}}</h1> visitors<br /><br />
+                            <h1>{{text.week.total-change-direction}}{{change.week.total}}</h1> pages opened<br />
+                        </div>
+                    </div>
+                </div>
+                <div id="side-tab-3" class="right-tab">
+                    <div class="grid">
+                        <div class="column grid-5 centered">
+                            <h4>These 30 days</h4><br />
+                            <h1>{{data.month.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.month.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Last 30 days</h4><br />
+                            <h1>{{data.last_month.visitors}}</h1> visitors<br /><br />
+                            <h1>{{data.last_month.total}}</h1> pages opened
+                        </div>
+                        <div class="column grid-5 centered">
+                            <h4>Change</h4><br />
+                            <h1>{{text.month.visitor-change-direction}}{{change.month.visitors}}</h1> visitors<br /><br />
+                            <h1>{{text.month.total-change-direction}}{{change.month.total}}</h1> pages opened<br />
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <h3>Hold on, more data is coming!</h3>
+            <p>
+                We're just waiting until your account gets a little older to show some more data.  Expect to see
+                information based on what pages your visitors went to, how many pages they view on average per
+                visit, and nice graphs showing visitors over time.
+            </p><br /><br />
+            <h3>Want more customers?</h3>
+            <p>
+                The more people visit your site, the more likely you'll be contacted for service.  We can help you bring
+                in more customers through <a href="#advertising">local advertising</a> and <a href="#publication">online
+                publication</a>.
+            </p>
+        </div>
+    </div>
+</div>

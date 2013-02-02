@@ -1,0 +1,113 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>
+                {{#is_paid}}
+                    Want to add time to your domain?
+                {{/is_paid}}
+                {{^is_paid}}
+                    {{#custom_url}}
+                        Time expired?  Get your domain back!
+                    {{/custom_url}}
+                    {{^custom_url}}
+                        Want your own custom domain?
+                    {{/custom_url}}
+                {{/is_paid}}
+                </h2>
+        </div>
+        <div class="content">
+            <div class="block small" style="float: right; width: 350px">
+                <div class="content">
+                    <fieldset>
+                        <h2>Pricing</h2>
+                        <label>Setup (Includes first 3 months)</label>
+                        <h3>$25</h3>
+                        <label>3 Month Hosting</label>
+                        <h3>$15</h3>
+                        <p>
+                            After you contact us, we'll respond to confirm availability and offer a payment link.
+                            From there you can choose recurring billing or a one time payment, and we will send
+                            you an email 2 weeks before your expiry.
+                        </p>
+                    </fieldset>
+                </div>
+            </div>
+            <br />
+            {{#is_paid}}
+                <p>
+                    We hope you're enjoying your upgraded account!  If you'd like to add more time, just send us an email
+                    to the same email that contacted you.  Alternatively, just plug in your domain below and we'll be
+                    in contact within 24 hours.
+                </p>
+            {{/is_paid}}
+            {{^is_paid}}
+                {{#custom_url}}
+                    <p>
+                        Looks like your time has expired!  If you're interested in getting your custom domain set back up
+                        and want to use the same domain, you shouldn't have to worry about a setup fee.  Just submit again
+                        using the same information and we'll get back to you within 24 hours.
+                    </p>
+                {{/custom_url}}
+                {{^custom_url}}
+                    <p>
+                        Great news!  If you don't like having your custom site hosted at www.contractorcopilot.com, you can instead
+                        have it hosted on your own custom domain.  The content will stay the same and the control panel will still be
+                        here, it will just be easier for your customers to remember your website address and look more professional.
+                    </p>
+        
+                    <h3>Wait, what's a domain name?</h3>
+                    <p>
+                        A domain name is simply the first part of a web address.  For example, our domain name is contractorcopilot.com.
+                        If you'd like you can have your custom site available at YourURL.com instead of contractorcopilot.com/c/YourURL.
+                    </p>
+                    <h3>What do I need to do?</h3>
+                    <p>
+                        Just send a domain request below.  We'll be in contact within 24 hours to provide you with a payment link and
+                        confirm your domain.  You'll have your site set up within two days!
+                    </p>    
+                {{/custom_url}}
+            {{/is_paid}}
+
+            <br />
+            <hr />
+            <h3>
+                Get your custom domain
+            </h3>
+            <form>
+                    <input type="hidden" id="business" value="{{ key }}" />
+                <p>
+                    <label>What domain name would you like?</label><br />
+                    www.<input type="text" id="domain_name" class="input small" value="{{ url }}" />
+                    <select id="tld">
+                        <option value=".ca">.ca</option>
+                        <option value=".com">.com</option>
+                        <option value=".org">.org</option>
+                        <option value=".net">.net</option>
+                        <option value=".info">.info</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="button" value="Link your site" id="submit_domain" />
+                </p>
+                <p>
+                    We'll be in contact as soon as we can (within 24 hours) to confirm if the name is available and take
+                    payment.
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+{{#is_paid}}
+
+{{/is_paid}}
+{{^is_paid}}
+{{#custom_url}}
+
+{{/custom_url}}
+{{^custom_url}}
+
+{{/custom_url}}
+{{/is_paid}}

@@ -1,0 +1,7 @@
+<div class="booking_list">
+    <h4>Existing requests</h4>
+    <div class="bookings">
+        <img src="/static/img/ajax-loader.gif" alt="Loading" />
+    </div>
+
+</div>

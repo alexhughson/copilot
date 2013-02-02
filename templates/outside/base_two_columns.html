@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+		<!-- Content Container -->
+		<div id="content">
+			<!-- normal Content Container -->
+			<div class="normal">
+				<div class="top"></div>		
+				<div class="txt">	
+{% block left_column %}
+
+{% endblock left_column %}
+                </div>
+   				<div class="normal_bottom"></div>
+			</div>
+			<!-- End Normal Content -->
+			
+			<!-- Start Right Content -->
+			<div class="right">
+
+				<!-- Start Sidebar -->
+				<div class="sidebar">
+					<!-- Sidebar Top  -->
+					<div class="sidebar_top"></div>
+					<div class="txt">
+{% block right_column %}
+{% endblock right_column %}
+                    </div>
+					<!-- Sidebar Normal Bottom -->
+					<div class="sidebar_normal_bottom"></div>
+				</div>	
+				<!-- End Sidebar -->
+			</div>
+			<!-- End Right Content -->
+		</div>
+	</div>
+	<!-- Page Container -->
+{% endblock content %}

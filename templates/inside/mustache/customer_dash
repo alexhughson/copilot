@@ -1,0 +1,4 @@
+<div class="customer_dash">
+    <div class="messages"></div>
+    <div class="bookings"></div>
+</div>

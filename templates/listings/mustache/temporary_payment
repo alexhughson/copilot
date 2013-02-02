@@ -1,0 +1,55 @@
+<h2>Submit a payment</h2>
+<p>
+    To make it easier to pay for my services, feel free to submit your payment through this form.  You'll be taken to
+    my payment processing service, AlertPay, then redirected back here.  I'll receive a notification within 10 minutes
+    that you've paid, and you'll receive a receipt instantly.
+</p>
+<p>
+    Please note that this is strictly for submitting a payment.  If you're looking to book my time, click the link
+    above titled 'Book Appointment'.
+</p>
+<hr />
+<form method="post" action="https://sandbox.alertpay.com/PayProcess.aspx" class="standardForm" id="payment_form" >
+    <h3>Submit a payment for {{business.full_name}}</h3>
+    <div class="field">
+        <label for="customer_name">Name</label>
+        <input type="text" id="customer_name" class="textbox-half" />
+        <span>Please enter both your first name and your last name</span>
+    </div>
+    <div class="field">
+        <label for='customer_email'>E-mail address</label>
+        <input type="text" id="customer_email" class="textbox-half" />
+        <span>Please enter your email</span>
+    </div>
+    <div class="field">
+        <label for='customer_email_confirm'>Confirm E-mail address</label>
+        <input type="text" id="customer_email_confirm" class="textbox-half"/>
+        <span>Email addresses must match</span>
+    </div>
+    <div class="field">
+        <label for="message_to_contractor">Any notes you'd like to attach to the payment</label>
+        <textarea id="message_to_contractor" cols="66" rows="3" class="textarea">
+Thanks for the job well done!
+        </textarea>
+    </div>
+    <div class="field">
+        <label for="payment_amount">Amount of payment</label>
+        $<input type="text" name="ap_amount" id="payment_amount" class="textbox-small" value="0.00" /> CAD
+        <span>Payment must be for at least $10</span>
+    </div>
+
+    <input type="hidden" name="ap_merchant" value="everyone@contractorcopilot.com"/>
+    <input type="hidden" name="ap_purchasetype" value="service"/>
+    <input type="hidden" name="ap_itemname" value="Services of {{business.full_name}}"/>
+    <input type="hidden" name="ap_currency" value="CAD"/>
+
+    <input type="hidden" name="ap_fname" value=""/>
+    <input type="hidden" name="ap_lname" value="">
+    <input type="hidden" name="ap_country" value="CAN"/>
+
+    <input type="hidden" name="ap_itemcode" value="{{business.key}}"/>
+    <input type="hidden" name="ap_returnurl" value="{{business.page.get_url}}#thankyou"/>
+    <input type="hidden" name="ap_cancelurl" value="{{business.page.get_url}}#cancel"/>
+    <input type="submit" class="submit" value="Continue to AlertPay.com to pay" id="pay_contractor" />
+
+</form>

@@ -1,0 +1,23 @@
+<div class="column grid-5">
+    
+    <div class="block small">
+        <div class="top">
+            <h2>Select your customer</h2>
+        </div>
+        <div class="content" id="place_customer_list_here">
+
+        </div>
+    </div>
+    
+</div>
+<div class="column grid-11">
+    <div class="block">
+        <div class="top">
+            <h2>Manage your customers</h2>
+        </div>
+        <div class="content dash">
+
+        </div>
+        </div>
+    </div>
+</div>

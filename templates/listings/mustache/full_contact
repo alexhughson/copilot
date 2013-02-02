@@ -1,0 +1,47 @@
+<h2>Contact</h2>
+<hr />
+<h3>My Contact details</h3>
+{{#phone}}
+<div class="column column300">
+    <strong>By phone</strong><br />
+    {{phone}}
+</div>
+{{/phone}}
+{{#email}}
+<div class="column column280">
+    <strong>By email</strong><br />
+    {{email}}
+</div>
+{{/email}}
+<div class="column column280 last">
+    <strong>By appointment</strong><br />
+    <a href="#schedule">See my schedule</a>
+</div>
+<hr />
+<div class="clearfix">&nbsp;</div>
+<hr />
+<h3>My Location</h3>
+
+<div class="column column300">
+    {{#business.street}}
+        <p>I'd prefer if you didn't stop by without making an appointment on my schedule 
+        or calling first.  For directions, just click on the map and it will take you to
+        Google Maps.</p>
+        <p><strong>
+            {{business.street}}<br />
+            {{business.city}}, {{business.province}}<br />
+        </strong></p>
+    {{/business.street}}
+    {{^business.street}}
+        <p>
+            I do business in {{business.city}}, {{business.province}}.  Book an 
+            appointment, call or email me to set up a meeting and we can arrange
+            a meetup at your convenience.
+        </p>
+    {{/business.street}}
+</div>
+<div class="column column600 last">
+    <a href="{{get_google_maps_link}}" target="_new">
+        <img src="{{get_big_business_address_url}}" class="right border-thick" /> 
+    </a>
+</div>

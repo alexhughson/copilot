@@ -1,0 +1,4 @@
+<div class="column column600">            	
+    <h2>Hey there!</h2>
+    <p>{{{about_me}}}</p>
+</div>

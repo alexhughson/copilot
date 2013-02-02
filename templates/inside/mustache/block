@@ -1,0 +1,10 @@
+<div class="block {{ classes }}">
+    {{#has_top}}
+	<div class="top">
+		<h2>{{ top_text }}</h2>
+	</div>
+	{{/has_top}}
+	<div class="content">
+	{{{ content }}}
+	</div>
+</div>

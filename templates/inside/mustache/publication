@@ -1,0 +1,98 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Publish your business</h2>
+        </div>
+        <div class="content">
+            <div class="block small" style="float: right; width: 350px">
+                <div class="content">
+                    <fieldset>
+                        <h2>Pricing</h2>
+                        <label>One time charge</label>
+                        <h3>$25</h3>
+                        <p>
+                            Includes permanent publication in 6 major online Canadian business directories.  Note that YellowPages.ca
+                            requires you to have a GST/HST number.  If you do not have one the price is discounted to $20.
+                        </p>
+                    </fieldset>
+                </div>
+            </div>
+            <br />
+            <p>
+                We've made it really easy for you to publish your business.  Publishing is the process of getting your
+                business name out there.  By being listed in business directories people will be more likely to find 
+                you and will make your custom site show up higher in web searches.
+            </p>
+            <p>
+                We'll do all the leg work for you.  Just tell us a bit about your business and we'll take care of the
+                registration forms, the confirmation emails, and the rest of the dirty stuff.
+            </p>
+            <p>
+                Once you submit, we'll get back to you within 24 hours with a payment link and confirmation.  Most directories
+                will be updated instantly, however some may take 48 hours or more to list.  We'll make sure the listings
+                are posted and respond back to you with links.
+            </p>
+            <div class="grid">
+                <div class="column grid-16">
+                    <h3>
+                        Your Information
+                    </h3>
+                    <p>
+                        Not that any changes you make to your information here is not reflected in your minisite or is a
+                        permanent change for your business.  If you enter a new email here, your minisite will still have
+                        the email found in the 'Edit Business' section.
+                    </p>
+                    <input type="hidden" value="{{business.key}}" id="business" />
+                    <p>
+                        <label>Business Name</label><br />
+                        <input type="text" class="text medium" disabled="disabled" value="{{business.full_name}}" /><br />
+                        <small>If you'd like to change your business name, you can change it from the main page under 'edit business'</small>
+                    </p>
+                    <p>
+                        <label>Email</label><br />
+                        <input type="text" class="text small" value="{{user.email}}" id="email" /><br />
+                    </p>
+                    <p>
+                        <label>Phone Number</label><br />
+                        <input type="text" class="text small" value="{{user.phone}}" id="phone_number" /><br />
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend>Address</legend>
+                            <p>
+                                Sorry, most publication options <strong>require</strong> a physical address.  If you don't have
+                                a business address, this can be your home address.
+                            </p>
+                            {{> edit_address}}
+                        </fieldset>
+                    </p>
+                    <p>
+                        <label>Describe your business (250 character minimum)</label><small class="above" id="description_length"><span>0</span> characters</small>
+                        <textarea rows="8" id="business_description">{{business.description}}{{^business.description}}{{business.page.about_business}}{{/business.description}}</textarea>
+                        <small>
+                            Some publication options offer to take a description of your company.  Most ask for a minimum
+                            of 250 characters (a paragraph or two).
+                        </small>
+                    </p>
+                    <p>
+                        <label>
+                            GST/HST Tax Number
+                        </label>
+                        <input type="text" class="text big" value="{{business.tax_number}}" id="tax_number" /><br />
+                        <small>
+                            The Yellow Pages requires your company to be officially registered with the government.  If
+                            you are registered then you can verify your business by entering that number.  Contractor
+                            Copilot does not use this number for anything other than communicating it to Yellow Pages
+                            to ensure you are listed.
+                        </small>
+                    </p>
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div><br /><hr />
+            <input type="button" class="button" value="Publish me!" id="submit" />
+            <p>Your business will be submitted for publication immediately and you should be listed in most sites within
+                <!--TODO CHECK TIMEFRAMES-->
+                48 hours.  Note that some listings take longer to update.</p>
+        </div>
+    </div>
+</div>

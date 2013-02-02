@@ -1,0 +1,47 @@
+/* LEADERBOARD */
+
+#index #container #leaderboard{
+	clear: both;
+	background: transparent url(../../../img/outside/index/.jpg) no-repeat;
+	height: 281px;
+	margin-top: 0px;
+	display: none;
+}
+
+
+#index #container #leaderboard .intro{
+	float:left;
+	margin-left: 20px;
+	margin-top: 70px;
+	width: 520px;
+}
+
+/* CONTENT */
+
+#corner{
+background:transparent url(../../../img/outside/index/cornerlabel.png) no-repeat scroll 0 0;
+display:block;
+height:70px;
+margin-left:316px;
+position:absolute;
+top:134px;
+width:70px;
+z-index:99;
+}
+
+#index .leadertext{float: left; margin:60px 0 0 40px; width:450px;}
+#index .leaderimage{float: right; margin:43px 47px 0 0; width: 380px;}
+#index .leadersteps{clear: both; height: 130px; position:relative; top:5px;}
+#index .leadersteps ul{margin:0 0 0 40px;}
+#index .leadersteps ul li{float:left; line-height:20px; margin:0 26px 0 10px; width:255px;}
+#index .leadersteps h2{margin:10px 0 -25px 44px;}
+#index .leadersteps img{float: left;} 
+#index .leaderlogin {margin: 30px 60px; padding-left: 90px}
+#index .leaderlogin img {margin: 10px 10px 10px 200px; text-align: center; padding: 10px}
+
+
+#index #content{
+	clear: both;
+	/*background: transparent url(../../../img/outside/index/.jpg) no-repeat;*/
+	padding-top: 5px;
+}
